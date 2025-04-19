@@ -1,41 +1,38 @@
 **(lab) file IO**
 
-Create a file input object to read from a file.
+Start by creating a file input stream so the program can read from a file.
 
-Try to open the file named data.csv.
+Try to open the file called data.csv.
 
-If the file doesn't open (maybe it doesn't exist or there's a typo), print an error message like "File could not be opened."
+print an error message like:
+**"File could not be opened."**
 
-Stop the program if this happens.
+End the program at this point so nothing breaks.
 
-Create a loop that goes through the file one line at a time.
+Loop through the file one line at a time using a while loop.
 
-For each line in the file:
+For each line:
 
-Store the entire line as a single string.
+Read the whole line into a string.
 
-Create a string stream (a tool to help break the line into smaller parts).
+Create a stringstream object to help split the line up.
 
-Split the line using the comma , as the separator (this is the CSV format).
+Use getline with a comma as the separator to break the line into 3 parts:
 
-Get the first number (before the first comma), and store it as a string.
+First part → store it as a string, then convert it to an integer.
 
-Convert that string into an integer.
+Second part → store it as a string, then convert it to an integer.
 
-Get the second number (between the first and second commas), and store it as a string.
+Third part → this is a word or short phrase, store it as a string.
 
-Convert that string into an integer.
+Remove any extra spaces at the front of the word, if needed.
 
-Get the third value (the word after the second comma), and store it as a string.
+Add the two numbers together to get how many times to repeat the word.
 
-Trim any extra spaces in front of the word.
+Use a for loop to print the word that many times, with a space in between.
 
-Add the two numbers together to find out how many times to repeat the word.
+After printing the word, move to the next line.
 
-Use a loop to print the word that many times, with a space after each one.
+Keep repeating this process for every line in the file.
 
-After printing the word multiple times, print a new line to move to the next row.
-
-After reading all lines, close the file.
-
-End the program.
+When the file is finished, close it and end the program.
