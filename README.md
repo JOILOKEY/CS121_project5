@@ -1,38 +1,34 @@
 **(lab) file IO**
 
-Start by creating a file input stream so the program can read from a file.
+Start the program.
 
 Try to open the file called data.csv.
 
-print an error message like:
-**"File could not be opened."**
+If the file can’t be opened (like if the file isn’t found), print an error message:
+"Error opening file!"
 
-End the program at this point so nothing breaks.
+Don't continue the program if the file can't be opened.
 
-Loop through the file one line at a time using a while loop.
+Use a loop to read the file one line at a time.
 
-For each line:
+For each line in the file:
 
-Read the whole line into a string.
+Store the full line as a string (each line looks like 1, 2, this).
 
-Create a stringstream object to help split the line up.
+Create a stringstream to help break the line into parts using the comma as the separator.
 
-Use getline with a comma as the separator to break the line into 3 parts:
+First, extract the first number (before the first comma), store it as a string, and convert it into an integer (num1).
 
-First part → store it as a string, then convert it to an integer.
+Next, extract the second number (between the commas), and convert it to another integer (num2).
 
-Second part → store it as a string, then convert it to an integer.
+Then, extract the last part (the word after the second comma) and store it as a string (word).
 
-Third part → this is a word or short phrase, store it as a string.
+Add the two numbers together to get the total number of times the word should be printed (sum = num1 + num2).
 
-Remove any extra spaces at the front of the word, if needed.
+Use a loop to print the word sum times, with a space after each one.
 
-Add the two numbers together to get how many times to repeat the word.
+After printing the word multiple times, print a new line to move to the next row.
 
-Use a for loop to print the word that many times, with a space in between.
+After the file is fully read and processed, close the file.
 
-After printing the word, move to the next line.
-
-Keep repeating this process for every line in the file.
-
-When the file is finished, close it and end the program.
+End the program.
