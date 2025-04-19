@@ -12,7 +12,7 @@ int main() {
 
     if (!file) {
         cerr << "Error opening file!" << endl;
-        return 1;
+ 
     }
 
     string line;
@@ -39,6 +39,6 @@ int main() {
     }
 
     file.close();
-    return 0;
+
 }
 
